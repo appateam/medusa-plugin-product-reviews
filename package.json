@@ -1,6 +1,6 @@
 {
   "name": "@appateam/medusa-plugin-product-reviews",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Add product reviews to your Medusa store",
   "author": "Kevin Furmanski <kevin@appateam.com>",
   "license": "MIT",
