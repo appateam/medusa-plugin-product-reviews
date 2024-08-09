@@ -41,9 +41,8 @@ class ProductReviewService extends TransactionBaseService {
    *   returned
    * @return the result of the find operation
    */
-  async listApprovedForProduct(
+  async listForProduct(
     productId: string,
-    onlyWithDescription: Boolean = false,
     selector = {},
     config: FindConfig<ProductReview> = {
       relations: [],
@@ -58,8 +57,6 @@ class ProductReviewService extends TransactionBaseService {
         ...query,
         where: {
           product_id: productId,
-          approved_at: Not(IsNull()),
-          description: onlyWithDescription ? Not(IsNull()) : undefined
         }
       })
       const count = await repository.count({

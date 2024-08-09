@@ -10,9 +10,8 @@ export const GET = async (
     "productReviewService"
   )
 
-  const { reviews, count, averageRating } = await productReviewService.listApprovedForProduct(
+  const { reviews, count, averageRating } = await productReviewService.listForProduct(
     req.params.id,
-    true,
     {},
     { relations: ['author'] }
   )
