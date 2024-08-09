@@ -27,7 +27,7 @@ interface StorePostReviewReq {
   rating: number;
   title: string | null;
   description: string | null;
-  pseudonym: string | null;
+  author: string | null;
 }
 
 export const POST = async (
@@ -44,7 +44,7 @@ export const POST = async (
     rating: req.body.rating,
     title: req.body.title,
     description: req.body.description,
-    pseudonym: req.body.pseudonym,
+    pseudonym: req.body.author,
   })
 
   res.json(review);
